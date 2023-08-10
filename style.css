@@ -69,6 +69,7 @@ h1 {
 }
 
 p {
+    margin-top: -20px;
     font-family: "typewriter";
     font-size: 1.4rem;    
 }
@@ -150,7 +151,7 @@ form {
 
 input:focus::placeholder {
     color: transparent;
-  }
+}
 
 /* Conditions for when an input label will show */
 .form-input input:focus + label,
@@ -159,7 +160,39 @@ input:focus::placeholder {
     display: inline;
 }
 
+
+/* Data-help attribute waits before deployed */
 .form-input input:focus:invalid + label:after {
     content: " (" attr(data-help) ")";
     animation: data-help 80s;
 }
+
+
+.form-input input:invalid {
+    border: 1px solid #b92326;
+}
+
+.form-input input:focus:invalid {
+    border: 1px solid #b92326;
+}
+
+.form-input input:invalid + label {
+    color: #b92326;
+} 
+
+.form-input input:valid {
+    border: 1px solid #8bc34a;
+}
+
+.form-input input:focus:valid {
+    border: 1px solid #8BC34A;
+}
+.form-input input:valid + label {
+    color: #8BC34A;
+}
+
+/* Ensures page will not show red borders on load */
+.form-input input:placeholder-shown {
+    border: 1px solid #d8d8d8;
+}
+
