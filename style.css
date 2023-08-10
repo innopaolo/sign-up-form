@@ -52,7 +52,8 @@ img {
 
 #odin-logo:hover {
     transform: scale(1.1);
-    opacity: 0.4;
+    box-shadow: 0 0 50px silver;
+    border-radius: 50px;
 }
 
 .content {
@@ -66,6 +67,10 @@ h1 {
     font-size: 6rem;
     font-family: "apocalypse.regular";
     margin: 0.1em 0;
+}
+
+h1:hover {
+    color: #9ebad2;
 }
 
 p {
@@ -196,3 +201,26 @@ input:focus::placeholder {
     border: 1px solid #d8d8d8;
 }
 
+.submit input {
+    padding: 8px 12px;
+    border: none !important;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+.submit input:hover {
+    box-shadow: 1px 1px 5px #9ebad2;
+    color: #9ebad2;
+    cursor: pointer;
+}
+
+.submit p {
+    margin-top: 4px;
+    font-size: 1.1rem;
+}
+
+.submit p span {
+    color: #9ebad2;
+    text-decoration: underline;
+}
