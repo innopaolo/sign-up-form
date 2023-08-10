@@ -71,3 +71,28 @@ p {
     font-family: "typewriter";
     font-size: 1.4rem;    
 }
+
+form {
+    font-family: "typewriter";
+    font-size: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: baseline;
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 2em;
+    gap: 8px;
+    height: 60vh;
+}
+
+.form-input input {
+    flex: 1;
+    position: relative;
+    min-height: 1px;
+    padding: 20px 4px 2px;
+    width: 100%;
+    flex: 0 0 100%;
+    border-radius: 4px;
+}
