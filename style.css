@@ -40,6 +40,7 @@ img {
     height: 100%;
 }
 
+/* Position logo at the bottom of hero image */
 #odin-logo {
     position: absolute;
     width: 100px;
@@ -81,18 +82,80 @@ form {
     vertical-align: baseline;
     border: 1px solid #D8D8D8;
     border-radius: 3px;
-    padding: 10px;
+    padding: 20px;
     margin: 2em;
     gap: 8px;
     height: 60vh;
 }
 
-.form-input input {
-    flex: 1;
+.form-input {
     position: relative;
-    min-height: 1px;
-    padding: 20px 4px 2px;
-    width: 100%;
-    flex: 0 0 100%;
-    border-radius: 4px;
+    width: 97%;
 }
+
+.form-input input {
+    min-height: 1px;
+    border-radius: 4px;
+    color: silver;
+    letter-spacing: 0.1rem;
+}
+
+/* Ensure input widths are the same */
+.user input, 
+.email input, 
+.password input, 
+.passcheck input {
+    padding: 25px 4px 2px;
+    width: 100%;
+    font-size: 1.3rem;
+    transition: all 0.5s ease-in-out;
+    background-color: #232227;
+}
+
+@keyframes label-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes data-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.form-input label {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    color: #8BC34A;
+    font-size: 1.2rem;
+    animation: label-fade 0.2s;
+    display: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+/* Conditions for when an input label will show */
+.form-input input:focus + label,
+.form-input input[required]:valid + label,
+.form-input input:not(:placeholder-shown) + label {
+    display: block;
+}
+
