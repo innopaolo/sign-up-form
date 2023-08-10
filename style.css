@@ -156,6 +156,10 @@ input:focus::placeholder {
 .form-input input:focus + label,
 .form-input input[required]:valid + label,
 .form-input input:not(:placeholder-shown) + label {
-    display: block;
+    display: inline;
 }
 
+.form-input input:focus:invalid + label:after {
+    content: " (" attr(data-help) ")";
+    animation: data-help 80s;
+}
