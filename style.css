@@ -22,10 +22,17 @@
     font: inherit;
 }
 
+
 body {
     background-color: #171619;
     display: flex;
     box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    width: 60vw;
+    height: 100vh;
 }
 
 img {
@@ -33,9 +40,18 @@ img {
     height: 100%;
 }
 
-.hero {
-    width: 60vw;
-    height: 100vh;
+#odin-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    left: 370px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#odin-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.4;
 }
 
 .content {
