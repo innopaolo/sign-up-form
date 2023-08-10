@@ -46,7 +46,7 @@ img {
     width: 100px;
     height: 100px;
     bottom: 20px;
-    left: 370px;
+    left: 44%;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -224,3 +224,22 @@ input:focus::placeholder {
     color: #9ebad2;
     text-decoration: underline;
 }
+
+
+@media (max-width: 1160px) {
+    body {
+        flex-direction: column;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .content {
+        margin: 0 auto;
+        width: 70%;
+    }
+
+
+  }
+  

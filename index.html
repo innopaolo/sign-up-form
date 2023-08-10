@@ -21,7 +21,7 @@
         <p>Sign up to experience the real Manila</p>
         <form action="#">
             <div class="form-input user">
-                <input autocomplete="off" type="text" id="user" placeholder="Pick a username without digits" name="user" pattern="^[^0-9\s]+$" size="30" maxlength="40" required>
+                <input autocomplete="off" type="text" id="user" placeholder="Username without digits" name="user" pattern="^[^0-9\s]+$" size="30" maxlength="40" required>
                 <label for="user" data-help="No spaces, soldier">Username</label>
             </div>
             <div class="form-input email">
@@ -29,12 +29,12 @@
                 <label for="email" data-help="Stay connected">Email</label>
             </div>
             <div class="form-input password">
-                <input type="password" id="pass" placeholder="Minimum 8 character password" name="pass" size="30" minlength="8" required>
+                <input type="password" id="pass" placeholder="8+ character password" name="pass" size="30" minlength="8" required>
                 <label for="pass" data-help="Make it strong, paisano">Password</label>
             </div>
             <div class="form-input passcheck">
-                <input type="password" id="passcheck" placeholder="Re-enter your password" name="passcheck" size="30" minlength="8" onChange="onChange()" required>
-                <label for="passcheck" data-help="Carve it in your mind">Re-enter password</label>
+                <input type="password" id="passcheck" placeholder="Re-enter password" name="passcheck" size="30" minlength="8" onChange="onChange()" required>
+                <label for="passcheck" data-help="Carve it in your mind">Password confirm</label>
             </div>
             <div class="form-input submit">
                 <input name="submit" type="submit" id="submit" class="submit" value="Sign up" onChange="onChange()" required>
